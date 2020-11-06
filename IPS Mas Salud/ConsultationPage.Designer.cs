@@ -32,8 +32,8 @@
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle2 = new System.Windows.Forms.DataGridViewCellStyle();
             System.Windows.Forms.DataGridViewCellStyle dataGridViewCellStyle3 = new System.Windows.Forms.DataGridViewCellStyle();
             this.label1 = new System.Windows.Forms.Label();
-            this.DtgvLiquidationTable = new System.Windows.Forms.DataGridView();
-            ((System.ComponentModel.ISupportInitialize)(this.DtgvLiquidationTable)).BeginInit();
+            this.dtgvLiquidationTable = new System.Windows.Forms.DataGridView();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvLiquidationTable)).BeginInit();
             this.SuspendLayout();
             // 
             // label1
@@ -48,14 +48,14 @@
             this.label1.TabIndex = 1;
             this.label1.Text = "Consulta de Liquidacion";
             // 
-            // DtgvLiquidationTable
+            // dtgvLiquidationTable
             // 
-            this.DtgvLiquidationTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            this.dtgvLiquidationTable.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.DtgvLiquidationTable.BackgroundColor = System.Drawing.Color.White;
-            this.DtgvLiquidationTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
-            this.DtgvLiquidationTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
+            this.dtgvLiquidationTable.BackgroundColor = System.Drawing.Color.White;
+            this.dtgvLiquidationTable.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dtgvLiquidationTable.CellBorderStyle = System.Windows.Forms.DataGridViewCellBorderStyle.SingleHorizontal;
             dataGridViewCellStyle1.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle1.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle1.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -63,8 +63,8 @@
             dataGridViewCellStyle1.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle1.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle1.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtgvLiquidationTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
-            this.DtgvLiquidationTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
+            this.dtgvLiquidationTable.ColumnHeadersDefaultCellStyle = dataGridViewCellStyle1;
+            this.dtgvLiquidationTable.ColumnHeadersHeightSizeMode = System.Windows.Forms.DataGridViewColumnHeadersHeightSizeMode.AutoSize;
             dataGridViewCellStyle2.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle2.BackColor = System.Drawing.SystemColors.Window;
             dataGridViewCellStyle2.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -72,9 +72,9 @@
             dataGridViewCellStyle2.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle2.SelectionForeColor = System.Drawing.Color.Black;
             dataGridViewCellStyle2.WrapMode = System.Windows.Forms.DataGridViewTriState.False;
-            this.DtgvLiquidationTable.DefaultCellStyle = dataGridViewCellStyle2;
-            this.DtgvLiquidationTable.Location = new System.Drawing.Point(12, 44);
-            this.DtgvLiquidationTable.Name = "DtgvLiquidationTable";
+            this.dtgvLiquidationTable.DefaultCellStyle = dataGridViewCellStyle2;
+            this.dtgvLiquidationTable.Location = new System.Drawing.Point(12, 44);
+            this.dtgvLiquidationTable.Name = "dtgvLiquidationTable";
             dataGridViewCellStyle3.Alignment = System.Windows.Forms.DataGridViewContentAlignment.MiddleLeft;
             dataGridViewCellStyle3.BackColor = System.Drawing.SystemColors.Control;
             dataGridViewCellStyle3.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -82,10 +82,10 @@
             dataGridViewCellStyle3.SelectionBackColor = System.Drawing.Color.White;
             dataGridViewCellStyle3.SelectionForeColor = System.Drawing.SystemColors.HighlightText;
             dataGridViewCellStyle3.WrapMode = System.Windows.Forms.DataGridViewTriState.True;
-            this.DtgvLiquidationTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
-            this.DtgvLiquidationTable.RowHeadersVisible = false;
-            this.DtgvLiquidationTable.Size = new System.Drawing.Size(737, 379);
-            this.DtgvLiquidationTable.TabIndex = 2;
+            this.dtgvLiquidationTable.RowHeadersDefaultCellStyle = dataGridViewCellStyle3;
+            this.dtgvLiquidationTable.RowHeadersVisible = false;
+            this.dtgvLiquidationTable.Size = new System.Drawing.Size(737, 379);
+            this.dtgvLiquidationTable.TabIndex = 2;
             // 
             // ConsultationPage
             // 
@@ -93,13 +93,13 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.BackColor = System.Drawing.Color.White;
             this.ClientSize = new System.Drawing.Size(800, 450);
-            this.Controls.Add(this.DtgvLiquidationTable);
+            this.Controls.Add(this.dtgvLiquidationTable);
             this.Controls.Add(this.label1);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "ConsultationPage";
             this.Text = "ConsultationPage";
             this.Load += new System.EventHandler(this.ConsultationPage_Load);
-            ((System.ComponentModel.ISupportInitialize)(this.DtgvLiquidationTable)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.dtgvLiquidationTable)).EndInit();
             this.ResumeLayout(false);
             this.PerformLayout();
 
@@ -108,6 +108,6 @@
         #endregion
 
         private System.Windows.Forms.Label label1;
-        private System.Windows.Forms.DataGridView DtgvLiquidationTable;
+        private System.Windows.Forms.DataGridView dtgvLiquidationTable;
     }
 }
