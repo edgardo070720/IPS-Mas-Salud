@@ -29,7 +29,30 @@ namespace IPS_Mas_Salud
         {
             List<ModeratorFeeLiquidation> liquidations = new List<ModeratorFeeLiquidation>();
             liquidations = service.LiquidationConsult().Liquidations;
-            DtgvLiquidationTable.DataSource = liquidations;
+            dtgvLiquidationTable.ColumnCount = 12;
+            dtgvLiquidationTable.ColumnHeadersVisible = true;
+            dtgvLiquidationTable.Columns[0].Name = "NUMERO DE LIQUIDACION";
+            dtgvLiquidationTable.Columns[1].Name = "CEDULA";
+            dtgvLiquidationTable.Columns[2].Name = "NOMBRES";
+            dtgvLiquidationTable.Columns[3].Name = "APELLIDOS";
+            dtgvLiquidationTable.Columns[4].Name = "TIPO DE AFILIACION";
+            dtgvLiquidationTable.Columns[5].Name = "SALARIO";
+            dtgvLiquidationTable.Columns[6].Name = "VALOR DEL SERVICIO";
+            dtgvLiquidationTable.Columns[7].Name = "CUOTA MODERADORA";
+            dtgvLiquidationTable.Columns[8].Name = "TOPE MAXIMO";
+            dtgvLiquidationTable.Columns[9].Name = "TARIFA APLICADA";
+            dtgvLiquidationTable.Columns[10].Name = "FECHA";
+            dtgvLiquidationTable.Columns[11].Name = "SALARIO MINIMO VIGENTE";
+            foreach (ModeratorFeeLiquidation liquidation in liquidations)
+            {
+                dtgvLiquidationTable.Rows.Add(liquidation.NumberOfLiquidation, liquidation.ClientId, liquidation.ClientName, liquidation.ClientLastName,
+                    liquidation.AffiliationType, liquidation.Salary, liquidation.ValueService, liquidation.ModeratorFee, liquidation.MaximumStop,
+                    liquidation.RateApplied, liquidation.Date, liquidation.SalaryMinimumValid);
+            }
+            if (service.LiquidationConsult().Error)
+            {
+                MessageBox.Show(service.LiquidationConsult().Message);
+            }
         }
 
         private void btnDelete_Click(object sender, EventArgs e)
