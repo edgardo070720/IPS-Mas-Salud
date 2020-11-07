@@ -67,6 +67,10 @@ namespace BLL
                 return "Error Al Momento De Eliminar: " + e.Message;
             }
         }
+        public List<ModeratorFeeLiquidation> FilterLiquidation(string typeLiquidation, string filter)
+        {
+            return repository.FilterLiquidation(typeLiquidation,filter);
+        }
     }
     public class LiquidationConsultationResponse
     {

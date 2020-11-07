@@ -93,5 +93,34 @@ namespace DAL
                 }
             }
         }
+        public List<ModeratorFeeLiquidation> FilterLiquidation(string typeLiquidation, string filter)
+        {
+            IList<ModeratorFeeLiquidation> liquidations = Consult();
+            if (typeLiquidation=="NUMERO DE LIQUIDACION")
+            {
+                liquidations = liquidations.Where(l => l.NumberOfLiquidation.ToString().Contains(filter)).ToList();
+            }
+            if (typeLiquidation == "CEDULA")
+            {
+                liquidations = liquidations.Where(l => l.ClientId.ToString().Contains(filter)).ToList();
+            }
+            if (typeLiquidation == "NOMBRES")
+            {
+                liquidations = liquidations.Where(l => l.ClientName.Contains(filter)).ToList();
+            }
+            if (typeLiquidation == "APELLIDOS")
+            {
+                liquidations = liquidations.Where(l => l.ClientLastName.Contains(filter)).ToList();
+            }
+            if (typeLiquidation == "TIPO DE AFILIACION")
+            {
+                liquidations = liquidations.Where(l => l.AffiliationType.Contains(filter)).ToList();
+            }
+            if (typeLiquidation == "FECHA")
+            {
+                liquidations = liquidations.Where(l => l.Date.ToString().Contains(filter)).ToList();
+            }
+            return liquidations.ToList();
+        }
     }
 }

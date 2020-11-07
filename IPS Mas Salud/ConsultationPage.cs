@@ -23,12 +23,11 @@ namespace IPS_Mas_Salud
 
         private void ConsultationPage_Load(object sender, EventArgs e)
         {
-            LookLiquidationTable();
+            LookLiquidationTable(service.LiquidationConsult().Liquidations);
         }
-        private void LookLiquidationTable()
+        private void LookLiquidationTable(List<ModeratorFeeLiquidation> liquidations)
         {
-            List<ModeratorFeeLiquidation> liquidations = new List<ModeratorFeeLiquidation>();
-            liquidations = service.LiquidationConsult().Liquidations;
+            
             dtgvLiquidationTable.ColumnCount = 12;
             dtgvLiquidationTable.ColumnHeadersVisible = true;
             dtgvLiquidationTable.Columns[0].Name = "NUMERO DE LIQUIDACION";
@@ -43,6 +42,7 @@ namespace IPS_Mas_Salud
             dtgvLiquidationTable.Columns[9].Name = "TARIFA APLICADA";
             dtgvLiquidationTable.Columns[10].Name = "FECHA";
             dtgvLiquidationTable.Columns[11].Name = "SALARIO MINIMO VIGENTE";
+            dtgvLiquidationTable.Rows.Clear();
             foreach (ModeratorFeeLiquidation liquidation in liquidations)
             {
                 dtgvLiquidationTable.Rows.Add(liquidation.NumberOfLiquidation,liquidation.ClientId,liquidation.ClientName,liquidation.ClientLastName,
@@ -53,6 +53,13 @@ namespace IPS_Mas_Salud
             {
                 MessageBox.Show(service.LiquidationConsult().Message);
             }
+        }
+
+        private void txtFilter_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            
+            LookLiquidationTable(service.FilterLiquidation(cmbFilterType.Text,txtFilter.Text.ToUpper()));
+            
         }
     }
 }

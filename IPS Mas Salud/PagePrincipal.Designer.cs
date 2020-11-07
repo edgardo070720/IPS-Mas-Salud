@@ -48,7 +48,7 @@
             // 
             // PnlMenu
             // 
-            this.PnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
+            this.PnlMenu.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
             this.PnlMenu.Controls.Add(this.button4);
             this.PnlMenu.Controls.Add(this.button3);
             this.PnlMenu.Controls.Add(this.button2);
@@ -104,7 +104,7 @@
             // 
             // BtnRegistration
             // 
-            this.BtnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(191)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
+            this.BtnRegistration.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(107)))), ((int)(((byte)(217)))), ((int)(((byte)(242)))));
             this.BtnRegistration.FlatAppearance.BorderSize = 0;
             this.BtnRegistration.FlatStyle = System.Windows.Forms.FlatStyle.Flat;
             this.BtnRegistration.Font = new System.Drawing.Font("Microsoft Sans Serif", 12F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
@@ -131,7 +131,7 @@
             // 
             // panel2
             // 
-            this.panel2.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(225)))), ((int)(((byte)(220)))), ((int)(((byte)(242)))));
+            this.panel2.BackColor = System.Drawing.Color.White;
             this.panel2.Controls.Add(this.PbBehind);
             this.panel2.Controls.Add(this.PbExpand);
             this.panel2.Dock = System.Windows.Forms.DockStyle.Top;
